@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:padding="@dimen/dp_5">
+
+    <TextView
+        android:id="@+id/text_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:text="用户名:"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/dp_5"
+        android:text="权限"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_userName"
+        android:padding="@dimen/dp_5"
+        android:text="权限"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:padding="@dimen/dp_5"
+        android:text="联系电话："
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_18" />
+
+    <Button
+        android:id="@+id/item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_red"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_5"
+        android:text="删除" />
+
+
+</RelativeLayout>
