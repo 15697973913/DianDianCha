@@ -2,7 +2,6 @@ package com.diandian.pdd.diandiancha.request;
 
 import android.util.Log;
 
-import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.util.MyLog;
 
 import org.json.JSONException;
@@ -12,12 +11,10 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -28,14 +25,14 @@ public class MyRequest {
      * "upload/userw9qCgHPG6779CtWN3XsWlD9PRTAt1z.png", "path":"upload /user"
 	 */
     private static OkHttpClient client;
+//    public static String HOST = "http://120.203.64.131:8080/";
     public static String HOST = "http://192.168.1.108:8080/";
-    public static String ImageUrl = "http://192.168.1.108:8080/Diandiancha/";
 
     static {
         client = new OkHttpClient().newBuilder()
-                .connectTimeout(20, TimeUnit.SECONDS)
-                .readTimeout(20, TimeUnit.SECONDS)
-                .writeTimeout(20, TimeUnit.SECONDS)
+                .connectTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(10, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
 //                .addInterceptor(new LogInterceptor())
                 .build();
         client.cookieJar();
@@ -142,10 +139,10 @@ public class MyRequest {
         return postForm(api, map, callback);
     }
 
-    public static Call queryAllWares(String sellerName,MyCallback callback) {
+    public static Call queryAllWares(String name,MyCallback callback) {
         String api = HOST + "Diandiancha/Servlet_QueryAllWares";
         HashMap<String, String> map = new HashMap<>();
-        map.put("sellerName",sellerName);
+        map.put("sellerName",name);
         return postForm(api, map, callback);
     }
 
@@ -166,6 +163,7 @@ public class MyRequest {
     public abstract static class MyCallback implements Callback {
         @Override
         public void onFailure(Call call, IOException e) {
+
             MyLog.log("netLog", "网络错误");
         }
 

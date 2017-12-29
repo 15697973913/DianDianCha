@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.diandian.pdd.diandiancha.R;
-import com.diandian.pdd.diandiancha.bean.WarseBean;
+import com.diandian.pdd.diandiancha.bean.WaresBean;
 
 import butterknife.BindView;
 
@@ -12,7 +12,7 @@ import butterknife.BindView;
  * Created by Administrator on 2017/12/29 0029.
  */
 
-public class UserPager1Adapter extends MyBaseAdapter<WarseBean>{
+public class UserPager1Adapter extends MyBaseAdapter<WaresBean>{
     @Override
     ViewHolder getHolder(View view) {
         layout= R.layout.user_pager1_item;

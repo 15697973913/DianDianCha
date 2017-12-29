@@ -45,15 +45,11 @@ public class LoginActivity extends BaseActivity {
                    //记录登录状态
                     getSharedPreferences("user",MODE_PRIVATE).edit().putString("user",body).apply();
                     switch (MyApplication.user.getUserType()){
-                        //系统管理员
                         case 1:
                             startActivity(new Intent(LoginActivity.this, AdminActivity.class));
                             finish();
                             break;
-                            //商家
                         case 2:
-                            startActivity(new Intent(LoginActivity.this, SellerActivity.class));
-                            finish();
                             break;
                         case 3:
                             break;
