@@ -70,6 +70,7 @@ public class SellerAdapter extends CommenAdapter {
                                         handler.sendEmptyMessage(0x1113);
                                     }
 
+
                                     public void failed(String msg) {
                                         super.failed(msg);
                                         progressDialog.dismiss();
