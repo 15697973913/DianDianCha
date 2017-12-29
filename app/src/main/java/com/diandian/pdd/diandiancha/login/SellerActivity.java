@@ -13,7 +13,7 @@ import android.widget.ListView;
 import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.adapter.SellerAdapter;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
-import com.diandian.pdd.diandiancha.bean.waresInfo;
+import com.diandian.pdd.diandiancha.bean.WaresBean;
 import com.diandian.pdd.diandiancha.request.MyRequest;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -46,7 +46,7 @@ public class SellerActivity extends AppCompatActivity {
     private void initData() {
         MyRequest.queryAllWares(MyApplication.user.getUserName(), new MyRequest.MyCallback() {
             public void sucess(String body) {
-                MyApplication.sellerWaresList = new Gson().fromJson(body, new TypeToken<ArrayList<waresInfo>>() {
+                MyApplication.sellerWaresList = new Gson().fromJson(body, new TypeToken<ArrayList<WaresBean>>() {
                 }.getType());
                 handler.sendEmptyMessage(0x1111);
             }

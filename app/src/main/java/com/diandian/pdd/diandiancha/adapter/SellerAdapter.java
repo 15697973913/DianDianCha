@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
-import com.diandian.pdd.diandiancha.bean.waresInfo;
+import com.diandian.pdd.diandiancha.bean.WaresBean;
 import com.diandian.pdd.diandiancha.login.SellerActivity;
 import com.diandian.pdd.diandiancha.request.MyRequest;
 import com.diandian.pdd.diandiancha.util.CustomProgressDialog;
@@ -80,7 +80,7 @@ public class SellerAdapter extends CommenAdapter {
                                         if (body.equals("成功")) {
                                             MyRequest.queryAllWares(MyApplication.user.getUserName(), new MyRequest.MyCallback() {
                                                 public void sucess(String body) {
-                                                    MyApplication.sellerWaresList = new Gson().fromJson(body, new TypeToken<ArrayList<waresInfo>>() {
+                                                    MyApplication.sellerWaresList = new Gson().fromJson(body, new TypeToken<ArrayList<WaresBean>>() {
                                                     }.getType());
                                                     handler.sendEmptyMessage(0x1112);
                                                     progressDialog.dismiss();

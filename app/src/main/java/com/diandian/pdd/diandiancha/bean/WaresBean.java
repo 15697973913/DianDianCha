@@ -5,7 +5,7 @@ package com.diandian.pdd.diandiancha.bean;
  * @author Administrator
  *	
  */
-public class waresInfo {
+public class WaresBean {
 	private int id;
 	private String waresName;
 	private String waresPrice;

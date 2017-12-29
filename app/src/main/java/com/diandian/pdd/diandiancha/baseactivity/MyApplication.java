@@ -3,10 +3,8 @@ package com.diandian.pdd.diandiancha.baseactivity;
 import android.app.Application;
 
 import com.diandian.pdd.diandiancha.bean.User;
-import com.diandian.pdd.diandiancha.bean.waresInfo;
-import com.diandian.pdd.diandiancha.request.MyRequest;
+import com.diandian.pdd.diandiancha.bean.WaresBean;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +15,7 @@ public class MyApplication extends Application {
     /**
      * 商家界面显示的商品信息
      */
-    public static List<waresInfo> sellerWaresList;
+    public static List<WaresBean> sellerWaresList;
 
     @Override
     public void onCreate() {
