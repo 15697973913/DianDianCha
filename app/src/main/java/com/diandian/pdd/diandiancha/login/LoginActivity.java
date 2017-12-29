@@ -12,7 +12,6 @@ import com.diandian.pdd.diandiancha.baseactivity.BaseActivity;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.bean.User;
 import com.diandian.pdd.diandiancha.request.MyRequest;
-import com.diandian.pdd.diandiancha.sellerview.SellerActivity;
 import com.google.gson.Gson;
 
 import butterknife.BindView;

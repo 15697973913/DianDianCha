@@ -68,7 +68,6 @@ public class SplashActivity extends BaseActivity {
         @Override
         public void run() {
             switch (MyApplication.user.getUserType()) {
-
                 case 1:
                     startActivity(new Intent(SplashActivity.this, AdminActivity.class));
                     break;
