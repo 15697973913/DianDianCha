@@ -1,4 +1,4 @@
-package com.diandian.pdd.diandiancha.login;
+package com.diandian.pdd.diandiancha.sellerview;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;

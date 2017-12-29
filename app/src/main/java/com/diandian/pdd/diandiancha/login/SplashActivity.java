@@ -6,11 +6,11 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
-import com.diandian.pdd.diandiancha.MainActivity;
 import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.admin.AdminActivity;
 import com.diandian.pdd.diandiancha.baseactivity.BaseActivity;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
+import com.diandian.pdd.diandiancha.sellerview.SellerActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

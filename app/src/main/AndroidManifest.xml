@@ -28,7 +28,7 @@
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".login.RegistrActivity" />
         <activity android:name=".admin.AdminActivity" />
-        <activity android:name=".login.SellerActivity"></activity>
+        <activity android:name=".sellerview.SellerActivity"></activity>
     </application>
 
 </manifest>

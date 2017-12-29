@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.bean.WaresBean;
-import com.diandian.pdd.diandiancha.login.SellerActivity;
+import com.diandian.pdd.diandiancha.sellerview.SellerActivity;
 import com.diandian.pdd.diandiancha.request.MyRequest;
 import com.diandian.pdd.diandiancha.util.CustomProgressDialog;
 import com.diandian.pdd.diandiancha.util.MyLog;
