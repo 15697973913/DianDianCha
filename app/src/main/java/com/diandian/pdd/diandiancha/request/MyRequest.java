@@ -28,7 +28,8 @@ public class MyRequest {
      * "upload/userw9qCgHPG6779CtWN3XsWlD9PRTAt1z.png", "path":"upload /user"
 	 */
     private static OkHttpClient client;
-    public static String HOST = "http://120.203.64.131:8080/";
+    public static String HOST = "http://192.168.1.108:8080/";
+    public static String ImageUrl = "http://192.168.1.108:8080/Diandiancha/";
 
     static {
         client = new OkHttpClient().newBuilder()
@@ -141,9 +142,10 @@ public class MyRequest {
         return postForm(api, map, callback);
     }
 
-    public static Call queryAllWares(MyCallback callback) {
+    public static Call queryAllWares(String sellerName,MyCallback callback) {
         String api = HOST + "Diandiancha/Servlet_QueryAllWares";
         HashMap<String, String> map = new HashMap<>();
+        map.put("sellerName",sellerName);
         return postForm(api, map, callback);
     }
 

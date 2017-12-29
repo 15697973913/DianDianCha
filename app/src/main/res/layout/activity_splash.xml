@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:scaleType="centerCrop"
-        android:src="@mipmap/login1"
+        android:src="@drawable/backgroundimg"
         android:layout_height="match_parent" />
     <LinearLayout
         android:orientation="horizontal"

@@ -70,8 +70,11 @@ public class SplashActivity extends BaseActivity {
             switch (MyApplication.user.getUserType()) {
                 case 1:
                     startActivity(new Intent(SplashActivity.this, AdminActivity.class));
+                    finish();
                     break;
                 case 2:
+                    startActivity(new Intent(SplashActivity.this, SellerActivity.class));
+                    finish();
                     break;
                 case 3:
                     break;

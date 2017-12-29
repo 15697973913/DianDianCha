@@ -69,12 +69,12 @@ public class AdminActivity extends BaseActivity {
                 initData();
             }
         });
-        refreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
-            @Override
-            public void onLoadmore(RefreshLayout refreshlayout) {
-                refreshlayout.finishLoadmore(2000,false);//传入false表示加载失败
-            }
-        });
+//        refreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
+//            @Override
+//            public void onLoadmore(RefreshLayout refreshlayout) {
+//                refreshlayout.finishLoadmore(2000,false);//传入false表示加载失败
+//            }
+//        });
     }
 
 
