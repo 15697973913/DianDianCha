@@ -39,15 +39,15 @@ public class BaseActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 //       toolbar = (Toolbar) findViewById(R.id.toolbar);
-       toolbar= (Toolbar) LayoutInflater.from(this).inflate(R.layout.layout,null);
-        // App Logo
-        toolbar.setLogo(R.mipmap.ic_launcher);
-// Title
-        toolbar.setTitle("My Title");
-// Sub Title
-        toolbar.setSubtitle("Sub title");
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.mipmap.ic_launcher);
+//       toolbar= (Toolbar) LayoutInflater.from(this).inflate(R.layout.layout,null);
+//        // App Logo
+//        toolbar.setLogo(R.mipmap.ic_launcher);
+//// Title
+//        toolbar.setTitle("My Title");
+//// Sub Title
+//        toolbar.setSubtitle("Sub title");
+//        setSupportActionBar(toolbar);
+//        toolbar.setNavigationIcon(R.mipmap.ic_launcher);
 
         // Menu item click 的監聽事件一樣要設定在 setSupportActionBar 才有作用
 //        toolbar.setOnMenuItemClickListener(onMenuItemClick);

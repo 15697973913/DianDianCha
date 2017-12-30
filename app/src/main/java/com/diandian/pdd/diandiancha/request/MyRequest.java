@@ -2,6 +2,7 @@ package com.diandian.pdd.diandiancha.request;
 
 import android.util.Log;
 
+import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.util.MyLog;
 
 import org.json.JSONException;
@@ -9,8 +10,11 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
@@ -145,17 +149,24 @@ public class MyRequest {
         map.put("sellerName",name);
         return postForm(api, map, callback);
     }
+    public static Call queryWares(String id,MyCallback callback) {
+        String api = HOST + "Diandiancha/Servlet_QueryWares";
+        HashMap<String, String> map = new HashMap<>();
+        map.put("Id",id);
+        return postForm(api, map, callback);
+    }
 
-    public static Call insterOrder(String waresName, String buyersName, String sellerName, String waresNum, String total, String orderState, String orderTime, MyCallback callback) {
+
+    public static Call addOrder( String buyersName, String sellerName, String waresNum, String total, String orderState,  MyCallback callback) {
         String api = HOST + "Diandiancha/Servlet_InterOrder";
         HashMap<String, String> map = new HashMap<>();
-        map.put("waresName", waresName);
         map.put("buyersName", buyersName);
         map.put("sellerName", sellerName);
         map.put("waresNum", waresNum);
         map.put("total", total);
         map.put("orderState", orderState);
-        map.put("orderTime", orderTime);
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.CHINA);
+        map.put("orderTime", sdf.format(new Date()));
         return postForm(api, map, callback);
     }
 
@@ -173,6 +184,7 @@ public class MyRequest {
             Log.i("netLog", "get netdata=" + body);
             try {
                 JSONObject json = new JSONObject(body);
+
                 if ("0000".equals(json.getString("error"))) {
 
                     sucess(json.getString("message"));

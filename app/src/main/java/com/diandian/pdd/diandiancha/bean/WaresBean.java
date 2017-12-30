@@ -13,17 +13,26 @@ public class WaresBean {
      * waresName : 阿萨姆
      */
 
-    private String waresPrice;
+    private float waresPrice;
     private String waresImgName;
     private String sellerName;
     private int id;
     private String waresName;
+    int num;
 
-    public String getWaresPrice() {
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public float getWaresPrice() {
         return waresPrice;
     }
 
-    public void setWaresPrice(String waresPrice) {
+    public void setWaresPrice(float waresPrice) {
         this.waresPrice = waresPrice;
     }
 

@@ -21,8 +21,9 @@ public class UserActivity extends BaseActivity {
         setContentView(R.layout.activity_user);
         ButterKnife.bind(this);
 
-        setHeader(Color.BLUE);
+        setHeader(Color.parseColor("#7191ff"));
 //        item1.set
+        item1.performClick();
     }
 
     long time;
