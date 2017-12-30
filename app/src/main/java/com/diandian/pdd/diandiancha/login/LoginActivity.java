@@ -12,6 +12,8 @@ import com.diandian.pdd.diandiancha.baseactivity.BaseActivity;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.bean.User;
 import com.diandian.pdd.diandiancha.request.MyRequest;
+import com.diandian.pdd.diandiancha.sellerview.SellerActivity;
+import com.diandian.pdd.diandiancha.user.UserActivity;
 import com.google.gson.Gson;
 
 import butterknife.BindView;
@@ -50,8 +52,12 @@ public class LoginActivity extends BaseActivity {
                             finish();
                             break;
                         case 2:
+                            startActivity(new Intent(LoginActivity.this, SellerActivity.class));
+                            finish();
                             break;
                         case 3:
+                            startActivity(new Intent(LoginActivity.this, UserActivity.class));
+                            finish();
                             break;
                     }
                 }

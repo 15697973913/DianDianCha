@@ -10,6 +10,7 @@ import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.admin.AdminActivity;
 import com.diandian.pdd.diandiancha.baseactivity.BaseActivity;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
+import com.diandian.pdd.diandiancha.sellerview.SellerActivity;
 import com.diandian.pdd.diandiancha.user.UserActivity;
 
 import butterknife.BindView;
@@ -39,7 +40,7 @@ public class SplashActivity extends BaseActivity {
 
             button_login.setVisibility(View.GONE);
             button_registr.setVisibility(View.GONE);
-            handler.postDelayed(r, 1000);
+            handler.postDelayed(r, 3000);
         } else {
             button_registr.setVisibility(View.VISIBLE);
             button_login.setVisibility(View.VISIBLE);
@@ -72,8 +73,7 @@ public class SplashActivity extends BaseActivity {
                     startActivity(new Intent(SplashActivity.this, AdminActivity.class));
                     break;
                 case 2:
-//                    startActivity(new Intent(SplashActivity.this, MerchantActivity.class));
-
+                    startActivity(new Intent(SplashActivity.this, SellerActivity.class));
                     break;
                 case 3:
                     startActivity(new Intent(SplashActivity.this, UserActivity.class));

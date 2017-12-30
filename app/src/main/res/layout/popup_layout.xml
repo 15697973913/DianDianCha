@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xksq_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:background="@drawable/yj_button"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/xksq_pz"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/img_presschange"
+                android:text="拍照"
+                android:textColor="#0000ff"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#cdcdcd" />
+
+            <Button
+                android:id="@+id/xksq_xc"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/img_presschange"
+                android:text="相册"
+                android:textColor="#0000ff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/yj_button" >
+
+            <Button
+                android:id="@+id/xksq_qx"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/img_presschange"
+                android:text="取消"
+                android:textColor="#0000ff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

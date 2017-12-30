@@ -31,6 +31,7 @@ public class MyRequest {
     private static OkHttpClient client;
 //    public static String HOST = "http://120.203.64.131:8080/";
     public static String HOST = "http://192.168.1.108:8080/";
+    public static String ImageUrl = "http://192.168.1.108:8080/Diandiancha/";;
 
     static {
         client = new OkHttpClient().newBuilder()

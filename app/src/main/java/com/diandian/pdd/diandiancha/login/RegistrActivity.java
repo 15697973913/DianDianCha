@@ -10,10 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.diandian.pdd.diandiancha.MainActivity;
 import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.baseactivity.BaseActivity;
-import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.bean.User;
 import com.diandian.pdd.diandiancha.request.MyRequest;
 import com.diandian.pdd.diandiancha.util.MyLog;

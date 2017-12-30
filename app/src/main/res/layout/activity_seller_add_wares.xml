@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whilt"
+    android:orientation="vertical"
+    tools:context="com.diandian.pdd.diandiancha.sellerview.SellerAddWaresActivity"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/maincolor">
+
+        <LinearLayout
+            android:id="@+id/addwares_bt_return"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_reture" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="添加商品"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/addwares_bt_addimg"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:src="@drawable/addimg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品名称:"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_20" />
+
+        <EditText
+            android:id="@+id/addwares_tv_name"
+            android:layout_width="@dimen/dp_184"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_20"
+            android:hint="请输入商品名称"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/hinttextcolor"
+            style="@style/MyEditText"
+            android:textSize="@dimen/sp_17" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品价格:"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_20" />
+
+        <EditText
+            android:id="@+id/addwares_tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_20"
+            android:hint="请输入商品价格"
+            android:inputType="number|numberDecimal"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/hinttextcolor"
+            android:textSize="@dimen/sp_17" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addwares_bt_addwares"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_pwd"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/btn_login"
+        android:drawablePadding="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp_40"
+        android:maxWidth="@dimen/dp_200"
+        android:padding="@dimen/dp_10"
+        android:text="发布"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

@@ -1,6 +1,6 @@
 package com.diandian.pdd.diandiancha.user;
 
-import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +10,13 @@ import android.widget.ListView;
 import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.adapter.UserPager1Adapter;
 import com.diandian.pdd.diandiancha.baseactivity.BaseFragment;
+import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.bean.WaresBean;
 import com.diandian.pdd.diandiancha.request.MyRequest;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.io.IOException;
@@ -66,7 +66,15 @@ public class Pager1Fragment extends BaseFragment {
 //                refreshlayout.finishLoadmore(10000);//传入false表示加载失败
 //            }
 //        });
-        initTitle(view,"商品","");
+        initTitle(view,"商品","退出登录");
+        setOnRightClick(view, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyApplication.user=null;
+                getActivity().getSharedPreferences("user", Context.MODE_PRIVATE).edit().clear().apply();
+                getActivity().finish();
+            }
+        });
         return view;
     }
 

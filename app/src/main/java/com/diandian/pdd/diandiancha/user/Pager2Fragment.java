@@ -1,9 +1,7 @@
 package com.diandian.pdd.diandiancha.user;
 
 import android.app.AlertDialog;
-import android.app.Fragment;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +11,6 @@ import android.widget.TextView;
 
 import com.diandian.pdd.diandiancha.R;
 import com.diandian.pdd.diandiancha.adapter.UserPager1Adapter;
-import com.diandian.pdd.diandiancha.admin.AdminActivity;
 import com.diandian.pdd.diandiancha.baseactivity.BaseFragment;
 import com.diandian.pdd.diandiancha.baseactivity.MyApplication;
 import com.diandian.pdd.diandiancha.bean.WaresBean;
@@ -22,12 +19,7 @@ import com.diandian.pdd.diandiancha.util.MyLog;
 import com.google.gson.Gson;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-
-import org.w3c.dom.Text;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

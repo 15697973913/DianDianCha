@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zhubackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llyout_my_coupon_sort"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#d7d7d7" />
+
+        <TextView
+            android:id="@+id/tv_not_spending"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="正在交易"
+            android:onClick="notSpending"
+            android:textColor="#898787" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#d7d7d7" />
+
+        <TextView
+            android:id="@+id/tv_yet_spent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="yetSpwnt"
+            android:gravity="center"
+            android:text="已完成"
+            android:textColor="#898787" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_tabLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:contentDescription="@null"
+        android:scaleType="matrix" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginBottom="5dp"
+        android:background="#d7d7d7" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

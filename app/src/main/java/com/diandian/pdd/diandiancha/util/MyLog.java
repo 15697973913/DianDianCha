@@ -2,12 +2,8 @@ package com.diandian.pdd.diandiancha.util;
 
 import android.content.Context;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.diandian.pdd.diandiancha.R;
 
 
 public class MyLog {
@@ -39,14 +35,19 @@ public class MyLog {
     private static Toast toast;
     private static TextView tv;
     public static   void showToast(Context context, String text) {
-        if (toast == null) {
-			View v = LayoutInflater.from(context).inflate(R.layout.toast, null);
-			tv =  v.findViewById(R.id.text);
-			toast = new Toast(context);
-			toast.setDuration(Toast.LENGTH_SHORT);
-			toast.setView(v);
+//        if (toast == null) {
+//			View v = LayoutInflater.from(context).inflate(R.layout.toast, null);
+//			tv =  v.findViewById(R.id.text);
+//			toast = new Toast(context);
+//			toast.setDuration(Toast.LENGTH_SHORT);
+//			toast.setView(v);
+//		}
+//            tv.setText(text);
+		if(toast==null){
+			toast=Toast.makeText(context,text,Toast.LENGTH_SHORT);
+		}else {
+			toast.setText(text);
 		}
-            tv.setText(text);
 
         toast.show();
     }
